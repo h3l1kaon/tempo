@@ -1,16 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import './sidenav.scss'
-import { BiSearch } from 'react-icons/bi'
-import { AiOutlinePlayCircle } from 'react-icons/ai'
-import { GiHorseHead } from 'react-icons/gi'
+import './sidenav.scss';
+import { BiSearch } from 'react-icons/bi';
+import { AiOutlinePlayCircle } from 'react-icons/ai';
+import { GiHorseHead } from 'react-icons/gi';
 
 const Sidenav = () => {
 	return (
 		<div className="side_nav">
 			<span className="logo">
-				<Link to="/">Tempo</Link>
+				<NavLink to="/">Tempo</NavLink>
 			</span>
 
 			<div className="nav_search">
@@ -23,21 +23,31 @@ const Sidenav = () => {
 			<nav>
 				<ul>
 					<li>
-						<span>
-							<AiOutlinePlayCircle />
-						</span>
-						<Link to="/playlists">Mes Playlists</Link>
+						<NavLink
+							className={({ isActive }) => (isActive ? 'link-active' : 'link')}
+							to="/playlists"
+						>
+							<span>
+								<AiOutlinePlayCircle />
+							</span>
+							Mes Playlists
+						</NavLink>
 					</li>
 					<li>
-						<span>
-							<GiHorseHead />
-						</span>
-						<Link to="/explore">Explorez</Link>
+						<NavLink
+							to="/explore"
+							className={({ isActive }) => (isActive ? 'link-active' : 'link')}
+						>
+							<span>
+								<GiHorseHead />
+							</span>
+							Explorez
+						</NavLink>
 					</li>
 				</ul>
 			</nav>
 		</div>
-	)
-}
+	);
+};
 
-export default Sidenav
+export default Sidenav;

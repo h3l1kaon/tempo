@@ -71,25 +71,36 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: start;
+			width: 100%;
 
 			li {
+				width: 100%;
 				list-style: none;
 				padding: 5px 0;
 				display: flex;
-				align-items: center;
-				span {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					padding: 5px;
-					font-size: 30px;
-					color: $fc_3;
-				}
 
 				a {
 					font-size: 20px;
 					color: $fc_3;
 					text-decoration: none;
+					display: flex;
+					align-items: center;
+					width: 80%;
+					padding-left: 4px;
+					border-radius: 10px;
+					transition: transform 0.3s linear;
+					span {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 5px;
+						font-size: 20px;
+						color: $fc_3;
+					}
+				}
+				.link-active {
+					background-color: $bg_1;
+					transform: translateX(5px);
 				}
 			}
 		}
