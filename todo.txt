@@ -1,0 +1,33 @@
+-lecteur audio:
+    -partie logique
+    -front
+    -lecture aléatoire
+    -recuperer le chemin de lecture depuis la bdd et l'executer;    
+
+    -queuer(sur le côté): gere la liste de lecture 
+    
+
+-Formulaires
+    -modal
+    -login/out  
+        
+
+    user: 
+    -crud playlist
+    artiste:
+    -crud titre/album
+
+-pages:
+    -home 
+
+
+    optionel
+    -champs de recherche ?
+
+
+questions: 
+    comment partager bdd sur git
+    comment bien 
+
+
+-passer en production
