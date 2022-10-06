@@ -1,0 +1,77 @@
+.tracklist_head {
+	width: 100%;
+	min-height: 250px;
+	padding: 10px;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	/*------------------------------------------------------     head image    */
+
+	.list_image_container {
+		min-width: 240px;
+		min-height: 240px;
+		max-width: 240px;
+		max-height: 240px;
+		margin-right: 30px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 5px;
+			@include lightBorder;
+		}
+	}
+
+	/*------------------------------------------------------     desc    */
+
+	.list_description {
+		height: 240px;
+		max-width: 600px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 40px;
+		/*------------------------------------------------------     head infos    */
+
+		.list_infos {
+			@include flexColumn;
+			// .list_title {
+			// }
+			.list_genre {
+				margin-bottom: 5px;
+				span {
+					color: $fc_3;
+					cursor: pointer;
+
+					font-size: 20px;
+					&:hover {
+						text-decoration: underline 2px $fc_3;
+					}
+				}
+			}
+			.list_last_update {
+				text-transform: uppercase;
+				@include greyText;
+				font-weight: 700;
+			}
+		}
+		/*------------------------------------------------------     details paragraph    */
+
+		.list_details {
+			color: $fc_2;
+			font-size: 0.8em;
+			width: 350px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+
+		button {
+			@include themeBtn;
+		}
+	}
+}

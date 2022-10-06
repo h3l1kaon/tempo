@@ -1,0 +1,38 @@
+@mixin lightBorder($alpha_value: 0.1, $hoverable: false) {
+	border: 1px solid rgba($color: #ffffff, $alpha: $alpha_value);
+	transition: all 0.2s ease-out;
+
+	@if ($hoverable) {
+		&:hover {
+			border: 1px solid rgba($color: #ffffff, $alpha: $alpha_value * 1.2);
+		}
+	}
+}
+
+@mixin flexColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin greyText($size: 12) {
+	color: $fc_2;
+	font-size: $size + px;
+}
+
+@mixin themeBtn($width: 60) {
+	@include lightBorder(0.3);
+	background-color: $theme_c;
+	padding: 4px 11px;
+	text-transform: capitalize;
+	outline: none;
+	border-radius: 6px;
+	width: $width + px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	transition: opacity 0.1s ease-in;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}

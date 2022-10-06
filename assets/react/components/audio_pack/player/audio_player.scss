@@ -1,0 +1,10 @@
+.audio_player {
+	@include lightBorder;
+	position: fixed;
+	bottom: 5px;
+	right: 50%;
+	transform: translateX(50%);
+	padding: 30px 300px;
+	background-color: $bg_1;
+	z-index: 5;
+}

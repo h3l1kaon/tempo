@@ -1,0 +1,57 @@
+.tracks_table {
+	width: 100%;
+	@include greyText(14);
+	border-collapse: collapse;
+	thead {
+		th {
+			margin-bottom: 200px;
+			padding: 10px 0;
+			text-align: left;
+		}
+	}
+	tbody {
+		tr {
+			margin: 2px 0;
+			&:nth-child(odd) {
+				background-color: rgba($color: #fff, $alpha: 0.03);
+			}
+
+			&:hover {
+				background-color: rgba($color: #fff, $alpha: 0.06);
+			}
+
+			td {
+				height: 45px;
+				padding-left: 5px;
+				&:first-child {
+					color: $fc_1;
+				}
+			}
+
+			.title {
+				width: 35%;
+
+				span:first-child {
+					width: 40px;
+					display: inline-block;
+				}
+			}
+			.duration {
+				width: 20px;
+			}
+		}
+		.track_row {
+			.play_track {
+				span:first-child {
+					padding: 10px;
+				}
+			}
+			.track_link {
+				&:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

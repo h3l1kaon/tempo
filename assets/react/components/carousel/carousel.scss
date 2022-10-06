@@ -1,0 +1,15 @@
+.carousel {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.children_container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		.child_container {
+			margin: 5px;
+		}
+	}
+}
