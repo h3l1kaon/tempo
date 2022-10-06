@@ -1,0 +1,60 @@
+.large_card {
+	.cover_container {
+		width: 400px;
+		height: 240px;
+		position: relative;
+		border-radius: 15px;
+		cursor: pointer;
+		.cover_image {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			border-radius: 15px;
+		}
+		.overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: #000000, $alpha: 0.1);
+			z-index: 2;
+			border-radius: 15px;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0.2);
+				.buttons_container {
+					display: flex;
+				}
+			}
+
+			.buttons_container {
+				display: none;
+				justify-content: space-between;
+				width: 90%;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	.list_card_desc {
+		height: 50px;
+		width: 100%;
+
+		.list_genre {
+			@include greyText(18);
+		}
+	}
+	@media screen and (max-width: 1000px) {
+		.cover_container {
+			width: 220px;
+			height: 220px;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.cover_container {
+			width: 180px;
+			height: 180px;
+		}
+	}
+}

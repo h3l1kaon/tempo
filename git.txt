@@ -1,0 +1,11 @@
+avant de push:
+
+# mettre de côté les changements locaux
+git stash
+# recup ce qu'il y a en ligne
+git pull
+# recup changements locaux si conflits résoudre les pb
+git stash pop
+# si pas de pbs 
+git add/commit/push
+
