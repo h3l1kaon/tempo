@@ -1,10 +1,10 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import './sidenav.scss';
-import { BiSearch } from 'react-icons/bi';
-import { AiOutlinePlayCircle } from 'react-icons/ai';
-import { GiHorseHead } from 'react-icons/gi';
+import "./sidenav.scss";
+import { BiSearch } from "react-icons/bi";
+import { AiOutlinePlayCircle } from "react-icons/ai";
+import { GiHorseHead } from "react-icons/gi";
 
 const Sidenav = () => {
 	return (
@@ -24,7 +24,7 @@ const Sidenav = () => {
 				<ul>
 					<li>
 						<NavLink
-							className={({ isActive }) => (isActive ? 'link-active' : 'link')}
+							className={({ isActive }) => (isActive ? "link-active" : "link")}
 							to="/playlists"
 						>
 							<span>
@@ -36,7 +36,7 @@ const Sidenav = () => {
 					<li>
 						<NavLink
 							to="/explore"
-							className={({ isActive }) => (isActive ? 'link-active' : 'link')}
+							className={({ isActive }) => (isActive ? "link-active" : "link")}
 						>
 							<span>
 								<GiHorseHead />
