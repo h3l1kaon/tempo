@@ -5,10 +5,12 @@ const TopNav = ({ triggerModal }) => {
 	return (
 		<div className="top_nav">
 			TopNav
-			<button onClick={() => triggerModal(true)} id="inscription">
+			<button onClick={() => triggerModal('register')} id="register">
 				Inscription
 			</button>
-			<button id="connexion">Connexion</button>
+			<button id="connexion" onClick={() => triggerModal('connection')}>
+				Connexion
+			</button>
 		</div>
 	);
 };

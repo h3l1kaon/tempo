@@ -10,7 +10,19 @@ import AlbumPage from './pages/AlbumPage';
 import UserPlaylistsPage from './pages/UserPlaylistsPage';
 
 const App = () => {
-	const [openModal, setOpenModal] = useState(false);
+	const [openModal, setOpenModal] = useState({ open: false, val: '' });
+
+	function triggerModal(request) {
+		// modal request
+		if (request === 'connection') {
+			setOpenModal({ open: true, val: 'connection' });
+			console.log('connection modal');
+		} else {
+			setOpenModal({ open: true, val: 'register' });
+			console.log('register modal');
+		}
+	}
+
 	useEffect(() => {
 		console.log(openModal);
 	}, [openModal]);
@@ -19,7 +31,7 @@ const App = () => {
 		<BrowserRouter>
 			<Sidenav />
 			<div className="container">
-				<TopNav triggerModal={setOpenModal} />
+				<TopNav triggerModal={triggerModal} />
 				<Modal openned={openModal} close={setOpenModal} />
 
 				<Routes>
