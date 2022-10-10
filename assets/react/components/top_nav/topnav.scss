@@ -4,13 +4,11 @@
 	top: 0;
 	right: 0;
 	display: flex;
-	// gap: 20px;
 }
 button {
-	@include themeBtn;
-	margin-left: 20px;
-	margin-bottom: 100px;
-	&:hover {
-		background-color: red;
-	}
+	@include themeBtn(80);
+	height: 30px;
+	line-height: 18px;
+	font-weight: 600;
+	margin-right: 20px;
 }

@@ -1,14 +1,13 @@
-import React from 'react';
-import './topnav.scss';
+import React from "react";
+import "./topnav.scss";
 
 const TopNav = ({ triggerModal }) => {
 	return (
 		<div className="top_nav">
-			TopNav
-			<button onClick={() => triggerModal('register')} id="register">
+			<button onClick={() => triggerModal("register")} id="register">
 				Inscription
 			</button>
-			<button id="connexion" onClick={() => triggerModal('connection')}>
+			<button id="connexion" onClick={() => triggerModal("connection")}>
 				Connexion
 			</button>
 		</div>

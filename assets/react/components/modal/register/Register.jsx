@@ -29,8 +29,10 @@ const Register = () => {
 					placeholder="Créez votre mot de passe"
 				/>
 				<br />
-				<label for="isArtist">Etes vous un artiste ?</label>
-				<input type="checkbox" id="isArtist" name="isArtist" />
+				<div className="container">
+					<label for="isArtist">Etes vous un artiste ?</label>
+					<input type="checkbox" id="isArtist" name="isArtist" />
+				</div>
 				<br />
 				<input type="submit" value="Envoyer" />
 			</form>
